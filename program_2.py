@@ -12,6 +12,13 @@ def word_separator(sentence):
     new_sentence = ""
     #    Add your logic here
 
+    
+    for i, char in enumerate(sentence):
+        if char.isupper() and i != 0:
+            new_sentence += " "
+        new_sentence += char.lower()
+    # Capitalize the first character of the final sentence
+    new_sentence = new_sentence[0].upper() + new_sentence[1:]
     return new_sentence.strip()
 
 # Example usage
