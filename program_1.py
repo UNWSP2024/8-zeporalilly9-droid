@@ -5,11 +5,21 @@
 
 # Add your logic starting on line 11
 
+# Program #1: Initials Extractor
+# Author: Zepora Lilly
+#Date: 10/24/2025
 def initials_generator(personsName):
 
     personsInitials = ""
     #    Add your logic here
+    # Split the name into parts
+    name_parts = personsName.strip().split()
 
+    for part in name_parts:
+        # Make sure it's not an empty string
+        if part:
+            personsInitials += part[0].upper() + ". "
+            
     return personsInitials.strip()
 
 personsName = input('Enter the users first, middle, and last name')
